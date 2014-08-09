@@ -11,6 +11,9 @@ History
 -------
 This was a idea I had years ago, and now that I have some freetime I figure why not try it out again.
 
+Why python django?
+------------------
+I've been wanting to learn python for a wile now.  So that's why the code might be awkward in places.  Also I figured that I'd get more pull requests in django then if I had written it in an experimental nightly build of scala.
 
 TODO:
 -----
