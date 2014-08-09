@@ -2,7 +2,9 @@ from django.http import HttpResponse
 from debate.models import Statement, ArgumentFor, ArgumentAgainst, Argument
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
+#from django.contrib.auth.decorators import login_required
 
+#@login_required
 def index(request):
     return HttpResponse("You're looking at me punk...") #TODO: list top level arguments
 

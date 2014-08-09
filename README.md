@@ -61,6 +61,8 @@ review more complicated systems for dealing with.  (lots f thought need to be gi
 Aguments to seed:
 santa will kill you
 you should not wear shoes on consecutive days
+patent law should be abolished http://research.stlouisfed.org/wp/2012/2012-035.pdf
+something about bitcoin? 
 the 2014 Boston/Cambrige/Sommervile ballot choices
  - to up the ante, agree to vote wherever the concensus lands (hacker news: "to get my vote, just convince me")
 
