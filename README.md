@@ -18,7 +18,6 @@ I've been wanting to learn python for a wile now.  So that's why the code might 
 TODO:
 -----
  - review and delete cruft
-  - remove the debug lines
   - spelling
   - kirk code review
  - top level arguments

@@ -9,12 +9,11 @@
 <h1><a href="{% url 'debate:statement' this_statement.id %}" 
 	style="color: {{this_statement.validity.color}}">
 	{{ this_statement.text }}</a></h1>
-{{ this_statement.validity }}
 <h2>arguments for</h2>
 <ul>
 	{% for argumentfor in this_statement.argumentfor_set.all %}
 
-	<li>({{argumentfor.argument}}) {% for argument_part in argumentfor.argument.unsorted_parts.all %}
+	<li>{% for argument_part in argumentfor.argument.unsorted_parts.all %}
 		<a
 		href="{% url 'debate:statement' argument_part.content.id %}"
 		style="color: {{argument_part.content.validity.color}}">{{ argument_part.content }}</a>. {% endfor %}
@@ -32,7 +31,7 @@
 <ul>
 	{% for argumentagainst in this_statement.argumentagainst_set.all %}
 
-	<li>({{argumentagainst.argument}}) {% for argument_part in argumentagainst.argument.unsorted_parts.all %}
+	<li>{% for argument_part in argumentagainst.argument.unsorted_parts.all %}
 		<a
 		href="{% url 'debate:statement' argument_part.content.id %}"
 		style="color: {{argument_part.content.validity.color}}">{{ argument_part.content }}</a>. {% endfor %}

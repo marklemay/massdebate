@@ -24,6 +24,7 @@ def submitfor(request, statement_id):
     a = Argument(pub_date=creationTime)
     a.save()
     for idx, val in enumerate(ss):
+        # TODO: normalize whitespace /n and such
         # TODO: deal with the "" case
         # TODO: trim string
         #print (idx, val)
