@@ -4,16 +4,16 @@ massdebate
 As much as I love to work on massdebate alone, I happily accept pull requests.
 
 What?
-=======
+-----
 This is a simple web app, that tries to encourage good debate though the user interface.  It is meant to be easy for visitors to oject to specific points in a transparent way. All critisism branches must be dealt with for an argument to be conidered correct.
 
 History
-=======
+-------
 This was a idea I had years ago, and now that I have some freetime I figure why not try it out again.
 
 
 TODO:
-=====
+-----
 github
 review and delete cruft
  - remove the debug lines
