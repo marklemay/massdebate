@@ -17,20 +17,19 @@ I've been wanting to learn python for a wile now.  So that's why the code might 
 
 TODO:
 -----
-github
-review and delete cruft
- - remove the debug lines
- - spelling
- - kirk code review
-top level arguments
-authentication
-record the submitting user, (use whatever the admin interface does if possible
-tox
-huroku
-sort arguments by validity
-inner argument navigation
-
-cloudbees or travis or whatever
+ - review and delete cruft
+  - remove the debug lines
+  - spelling
+  - kirk code review
+ - top level arguments
+ - authentication
+ - record the submitting user, (use whatever the admin interface does if possible
+ - tox
+ - huroku
+ - better landing page for argument submission
+ - sort arguments by validity
+ - inner argument navigation
+ - cloudbees or travis or whatever
 
 readme
 authenticate everything
