@@ -17,12 +17,12 @@ class Statement(models.Model):
     
     # a statment is strong becuase for the reasons for it, and weak becuase f the reasons against it
     def validity(self):
-        best_for = Evidence.contredicted
+        best_for = Evidence.contradicted
         for argumentFor in self.argumentfor_set.all():
             if argumentFor.argument.validity().value >= best_for.value:
                 best_for = argumentFor.argument.validity()
         
-        best_against = Evidence.contredicted
+        best_against = Evidence.contradicted
         for argumentAgainst in self.argumentagainst_set.all():
             if argumentAgainst.argument.validity().value >= best_for.value:
                 best_against = argumentAgainst.argument.validity()
@@ -34,7 +34,7 @@ class Statement(models.Model):
                 return Evidence.supported
         else:
             if best_against.value >= Evidence.unsupported.value:  # @UndefinedVariable
-                return Evidence.contredicted
+                return Evidence.contradicted
             else:
                 return Evidence.unsupported
 

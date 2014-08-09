@@ -14,7 +14,7 @@ class Evidence(Enum):
     def color(self):
         if self == Evidence.wrong:
             return "Violet"
-        elif self == Evidence.contredicted:
+        elif self == Evidence.contradicted:
             return "DarkRed"
         elif self == Evidence.conflicting:
             return "DarkOrange"
