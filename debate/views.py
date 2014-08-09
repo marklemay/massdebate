@@ -26,9 +26,8 @@ def submitfor(request, statement_id):
     for idx, val in enumerate(ss):
         # TODO: normalize whitespace /n and such
         # TODO: deal with the "" case
-        # TODO: trim string
         #print (idx, val)
-        newS = Statement(text=val, pub_date=creationTime)
+        newS = Statement(text=val.strip(), pub_date=creationTime)
         newS.save()
         a.unsorted_parts.create(part=idx, content=newS)
     afor = ArgumentFor(statment=s, argument=a)

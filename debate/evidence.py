@@ -5,7 +5,7 @@ from enum import Enum
 
 class Evidence(Enum):
     wrong = 0 #this should never actually be used
-    contredicted = 1
+    contradicted = 1
     conflicting = 2 #TODO rename?
     unsupported = 3
     supported = 4
@@ -24,6 +24,6 @@ class Evidence(Enum):
             return "Green"
             
 
-# statments witch are not contredicted are consitered good
+    # statments witch are not contradicted are consitered good
     def isGood(self):
         return self == Evidence.unsupported or self == Evidence.supported

@@ -52,7 +52,8 @@ class Argument(models.Model):
                 out = argument_part.content.validity()
             
         # TODO I would like a cleaner way to write this logic
-        if len(self.unsorted_parts.all()) == 0:
+        # Kirk: this could probably go at the top of the method, rather than down here?
+        if not self.unsorted_parts.all():
             return Evidence.wrong
         return out
         
