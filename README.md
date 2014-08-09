@@ -1,4 +1,4 @@
 massdebate
 ==========
 
-a debate site, with a twist
+as much as I love to work on massdebate alone, I happily accept pull requests.
