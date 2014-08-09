@@ -3,10 +3,8 @@ from debate.models import Statement, ArgumentFor, ArgumentAgainst, Argument
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
 
-# Create your views here.
-
 def index(request):
-    return HttpResponse("You're looking at me punk...")
+    return HttpResponse("You're looking at me punk...") #TODO: list top level arguments
 
 def statement(request, statement_id):
     this_statement = Statement.objects.get(pk=statement_id)

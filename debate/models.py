@@ -43,11 +43,6 @@ class Statement(models.Model):
 
 class Argument(models.Model):
     pub_date = models.DateTimeField('date published')
-    
-#     def argumentParts(self):
-#         return self.unsorted_parts.all()
-#         return self.unsorted_parts.order_by('part')
-#     
 
 # an argument is only as strong as its weakest statment
     def validity(self):
@@ -65,6 +60,7 @@ class Argument(models.Model):
         return 'Argument:'+str(self.id)+ ' ('+str(self.validity())+')'
 
 
+# these classes just denormalize data
 class ArgumentFor(models.Model):
     statment = models.ForeignKey(Statement)
     argument =  models.ForeignKey(Argument)
