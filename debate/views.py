@@ -22,17 +22,25 @@ def submitfor(request, statement_id):
     ss = request.POST['argumentfor'].split(".") #TODO: rename varaibles for clarity and justice!
     creationTime =timezone.now()
     a = Argument(pub_date=creationTime)
-    a.save()
-    for idx, val in enumerate(ss):
-        # TODO: normalize whitespace /n and such
-        # TODO: deal with the "" case
+    a.save() # TODO: this is a very slight bug with "" input
+    
+    idx = 0 # TODO: this feels bad, I would rather filter with lambdas
+    for val in ss:
+        # TODO: normalize whitespace /n and such within string
         #print (idx, val)
-        newS = Statement(text=val.strip(), pub_date=creationTime)
-        newS.save()
-        a.unsorted_parts.create(part=idx, content=newS)
-    afor = ArgumentFor(statment=s, argument=a)
-    afor.save()
-    return HttpResponse(ss)
+        # deal with the "" case
+        t=val.strip()
+        if t:
+            newS = Statement(text=t, pub_date=creationTime)
+            newS.save()
+            a.unsorted_parts.create(part=idx, content=newS)
+            idx = idx +1
+    if a.unsorted_parts.all():
+        afor = ArgumentFor(statment=s, argument=a)
+        afor.save()
+        return statement(request, statement_id)
+    else:
+        return HttpResponse("cannot add an empty argumnet")
 #     try:
 #         selected_choice = p.choice_set.get(pk=request.POST['argumentfor'])
 #     except (KeyError, Choice.DoesNotExist):
@@ -56,13 +64,21 @@ def submitagainst(request, statement_id):
     creationTime =timezone.now()
     a = Argument(pub_date=creationTime)
     a.save()
-    for idx, val in enumerate(ss):
-        # TODO: deal with the "" case
-        # TODO: trim string
+    
+    idx = 0 # TODO: this feels bad, I would rather filter with lambdas
+    for val in ss:
+        # TODO: normalize whitespace /n and such within string
         #print (idx, val)
-        newS = Statement(text=val, pub_date=creationTime)
-        newS.save()
-        a.unsorted_parts.create(part=idx, content=newS)
-    a_against = ArgumentAgainst(statment=s, argument=a)
-    a_against.save()
-    return HttpResponse(ss)
+        # deal with the "" case
+        t=val.strip()
+        if t:
+            newS = Statement(text=t, pub_date=creationTime)
+            newS.save()
+            a.unsorted_parts.create(part=idx, content=newS)
+            idx = idx +1
+    if a.unsorted_parts.all():
+        a_against = ArgumentAgainst(statment=s, argument=a)
+        a_against.save()
+        return statement(request, statement_id)
+    else:
+        return HttpResponse("cannot add an empty argumnet")

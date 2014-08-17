@@ -1,8 +1,5 @@
 from django.contrib import admin
-from debate.models import Statement
-from debate.models import Argument
-from debate.models import ArgumentFor
-from debate.models import ArgumentPart
+from debate.models import Statement, Argument, ArgumentFor, ArgumentAgainst, ArgumentPart
 
 # admin.site.register(Statement)
 
@@ -30,7 +27,12 @@ admin.site.register(Argument, ArgumentAdmin)
 class ArgumentForAdmin(admin.ModelAdmin):
     fields = ['argument']
  
-admin.site.register(ArgumentFor, ArgumentForAdmin)
+admin.site.register(ArgumentFor, ArgumentForAdmin) 
+
+class ArgumentAgainstAdmin(admin.ModelAdmin):
+    fields = ['argument']
+ 
+admin.site.register(ArgumentAgainst, ArgumentAgainstAdmin)
  
 class ArgumentForInline(admin.StackedInline): #TODO: make admin.TabularInline
     model = ArgumentFor

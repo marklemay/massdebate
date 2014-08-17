@@ -23,7 +23,7 @@
 <form action="{% url 'debate:submitfor' this_statement.id %}"
 	method="post">
 	{% csrf_token %} 
-	<textarea rows="4" cols="50" name="argumentfor" id="argumentfor"> </textarea> <br>
+	<textarea rows="4" cols="50" name="argumentfor" id="argumentfor">Becuase...</textarea> <br>
 	<input type="submit" value="Submit Argument For" />
 </form>
 
@@ -41,6 +41,6 @@
 <form action="{% url 'debate:submitagainst' this_statement.id %}"
 	method="post">
 	{% csrf_token %} 
-	<textarea rows="4" cols="50" name="argumentagainst" id="argumentagainst"> </textarea> <br>
+	<textarea rows="4" cols="50" name="argumentagainst" id="argumentagainst">Becuase...</textarea> <br>
 	<input type="submit" value="Submit Argument Against" />
 </form>
