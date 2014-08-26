@@ -23,13 +23,6 @@ How to set up a heroku instance
 
 (create a heroku acount, possibly have to deal with permisioning/ssh bs)
 
-(delete the initial database) TODO: git ignore that shit
-
-git clone https://github.com/marklemay/massdebate.git
-cd massdebate/
-heroku create
-git push heroku master
-heroku run python manage.py runserver
 ```bash
 $ git clone https://github.com/marklemay/massdebate.git
 $ cd massdebate/
