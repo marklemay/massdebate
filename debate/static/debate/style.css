@@ -13,3 +13,7 @@ a:hover {
 a:active {
     text-decoration: underline;
 }
+
+li {
+    padding: 5px 0px;
+}
