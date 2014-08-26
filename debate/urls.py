@@ -7,5 +7,6 @@ urlpatterns = patterns('',
     url(r'^statement/(?P<statement_id>\d+)/$', views.statement, name='statement'),
     url(r'^statement/(?P<statement_id>\d+)/submitfor$', views.submitfor, name='submitfor'),
     url(r'^statement/(?P<statement_id>\d+)/submitagainst$', views.submitagainst, name='submitagainst'),
+    url(r'^ballot$', views.ballot, name='ballot')
     #TODO should probably only have 1 argument subission url
 )

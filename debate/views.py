@@ -11,11 +11,13 @@ def index(request):
 def statement(request, statement_id):
     this_statement = Statement.objects.get(pk=statement_id)
     #TODO: arguements for and against should really be sorted by most correct
-    crap = ['f','u']
-    context = {'this_statement': this_statement,
-               'crap': crap}
+    context = {'this_statement': this_statement}
     return render(request, 'debate/statement.html', context)
 #     return HttpResponse(Statement.objects.get(pk=statement_id).text)
+
+# TODO: the ballot stuff might be suficiently different enough, that it  should be in it's own django app
+def ballot(request):
+    return render(request, 'debate/ballot_prototype.html')
 
 def submitfor(request, statement_id):
     s = get_object_or_404(Statement, pk=statement_id)
