@@ -1,3 +1,6 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'debate/style.css' %}" />
+
 {% if error_message %}
 <p>
 	<strong>{{ error_message }}</strong>
@@ -16,7 +19,9 @@
 	<li>{% for argument_part in argumentfor.argument.unsorted_parts.all %}
 		<a
 		href="{% url 'debate:statement' argument_part.content.id %}"
-		style="color: {{argument_part.content.validity.color}}">{{ argument_part.content }}</a>. {% endfor %}
+		style="color: {{argument_part.content.validity.color}}" >
+			{{ argument_part.content }}
+		</a>. {% endfor %}
 	</li> {% endfor %}
 </ul>
 
