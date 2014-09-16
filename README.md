@@ -24,6 +24,7 @@ How to set up a heroku instance
 (create a heroku acount, possibly have to deal with permisioning/ssh bs)
 
 ```bash
+$ heroku login
 $ git clone https://github.com/marklemay/massdebate.git
 $ cd massdebate/
 $ heroku create

@@ -6,20 +6,18 @@
 	<strong>{{ error_message }}</strong>
 </p>
 {% endif %}
-<!-- there is a lot of duplicated code, TODO: is there a way to use snippets in django -->
 <!-- I know that I have offended the gods of cascading style sheets with this code -->
 
-<h1><a href="{% url 'debate:statement' this_statement.id %}" 
-	style="color: {{this_statement.validity.color}}">
-	{{ this_statement.text }}</a></h1>
+
+{% load debate_extras %}
+
+<h1>{% link this_statement %}</h1>
 <h2>arguments for</h2>
 <ul>
 	{% for argumentfor in this_statement.argumentfor_set.all %}
 
 	<li>{% for argument_part in argumentfor.argument.unsorted_parts.all %}
-		<a
-		href="{% url 'debate:statement' argument_part.content.id %}"
-		style="color: {{argument_part.content.validity.color}}" >{{ argument_part.content }}</a>. {% endfor %}
+		{% link argument_part.content %}. {% endfor %}
 	</li> {% endfor %}
 </ul>
 
@@ -35,9 +33,7 @@
 	{% for argumentagainst in this_statement.argumentagainst_set.all %}
 
 	<li>{% for argument_part in argumentagainst.argument.unsorted_parts.all %}
-		<a
-		href="{% url 'debate:statement' argument_part.content.id %}"
-		style="color: {{argument_part.content.validity.color}}">{{ argument_part.content }}</a>. {% endfor %}
+		{% link argument_part.content %}. {% endfor %}
 	</li> {% endfor %}
 </ul>
 
