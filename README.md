@@ -38,8 +38,6 @@ TODO:
  - review and delete cruft
   - spelling
   x kirk code review
-  - show bria
-  - show satvic
   - ...
   - beg some designer to help with the colors and font and css
  - top level arguments
