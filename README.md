@@ -33,25 +33,3 @@ $ heroku run python manage.py syncdb
 $ heroku open
 ```
 
-TODO:
------
- - review and delete cruft
-  - spelling
-  x kirk code review
-  - ...
-  - beg some designer to help with the colors and font and css
- - top level arguments
- - authentication
- - record the submitting user, (use whatever the admin interface does if possible
- - virtualenv
- x huroku
- - better landing page for argument submission
- - sort arguments by validity
- - inner argument navigation
- - cloudbees or travis or whatever
-- MA 2014 elections
- - add manage.py that generates the arguments with pre-seeded voter guide info
- - ballot initiatives
- - candidates
- - local sommerville stuff
-
