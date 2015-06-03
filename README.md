@@ -1,7 +1,7 @@
 massdebate
 ==========
 
-(TODO: link to heroku app)
+[demo on Heroku](http://massdebate.herokuapp.com/statement/2/)
 
 As much as I love to work on massdebate alone, I happily accept pull requests.
 
